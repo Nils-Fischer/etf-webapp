@@ -298,6 +298,8 @@ public class StatusController {
 
     public void ensureStatusNotMajor() throws LocalizableApiError {
         if (ServiceStatus.valueOf(serviceStatus.get().status) == ServiceStatus.MAJOR) {
+            List<String> messages = serviceStatus.get().messages;
+            logger.error(messages.get(messages.size()-1));
             throw new LocalizableApiError("l.system.status.major", false, 503);
         }
     }
