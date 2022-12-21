@@ -99,4 +99,17 @@ public class View {
         return EtfConfig.getInstance().getProperty(EtfConfig.ETF_SUBMIT_ERRORS);
     }
 
+    public static String getBranding() {
+        String branding = EtfConfig.getInstance().getProperty(EtfConfig.ETF_BRANDING);
+        String brandingDefault = EtfConfig.getInstance().getPropertyDefault(EtfConfig.ETF_BRANDING);
+        if (branding == brandingDefault) {
+            return branding + " " + getVersion() + "-xyz";
+        }
+        else {
+            String brandingVersion = EtfConfig.getInstance().getProperty(EtfConfig.ETF_BRANDING_VERSION);
+            String versionDefault = EtfConfig.getInstance().getPropertyDefault(EtfConfig.ETF_BRANDING_VERSION);
+            return branding + " " + (brandingVersion == versionDefault ? getVersion() : brandingVersion)
+                + " (based on ETF)";
+        }
+    }
 }

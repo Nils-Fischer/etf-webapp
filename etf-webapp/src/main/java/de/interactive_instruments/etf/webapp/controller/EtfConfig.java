@@ -65,6 +65,8 @@ public class EtfConfig implements PropertyHolder {
     public static final String ETF_API_BASE_URL = "etf.api.base.url";
     public static final String ETF_API_ALLOW_ORIGIN = "etf.api.allow.origin";
     public static final String ETF_BRANDING_TEXT = "etf.branding.text";
+    public static final String ETF_BRANDING = "etf.branding";
+    public static final String ETF_BRANDING_VERSION = "etf.branding.version";
     public static final String ETF_TESTOBJECT_ALLOW_PRIVATENET_ACCESS = "etf.testobject.allow.privatenet.access";
     // in minutes
     public static final String ETF_TESTOBJECT_UPLOADED_LIFETIME_EXPIRATION = "etf.testobject.temporary.lifetime.expiration";
@@ -119,6 +121,8 @@ public class EtfConfig implements PropertyHolder {
         {
             put(ETF_WEBAPP_BASE_URL, "http://localhost:8080/etf-webapp");
             put(ETF_BRANDING_TEXT, "ETF");
+            put(ETF_BRANDING, "ETF");
+            put(ETF_BRANDING_VERSION, "x.y.z");
             put(ETF_TESTOBJECT_ALLOW_PRIVATENET_ACCESS, "false");
             put(ETF_TEST_OBJECT_MAX_SIZE, "5368709120");
             put(ETF_REPORT_COMPARISON, "false");
@@ -636,4 +640,7 @@ public class EtfConfig implements PropertyHolder {
         return this.configProperties.size();
     }
 
+    public String getPropertyDefault(final String key) {
+        return defaultProperties.get(key);
+    }
 }
