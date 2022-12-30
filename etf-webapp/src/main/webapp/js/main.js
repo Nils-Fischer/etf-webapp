@@ -18,62 +18,46 @@ require.config( {
 
         // Do not change order!
         "jquery": [
-            "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min",
-            "https://code.jquery.com/jquery-1.11.3.min",
             "lib/jquery.min"
         ],
 
         'jquery.mobile.config': 'config/jquery.mobile.config',
 
         "jquery.mobile": [
-            "https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min",
-            "https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min",
-            "lib/jquery.mobile.min"
+            "lib/jquery.mobile"
         ],
 
         "underscore": [
-            "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min",
-            "https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min",
             "lib/lodash.min"
         ],
         "backbone": [
-            "https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min",
-            "https://fastcdn.org/Backbone.js/1.2.3/backbone-min",
             "lib/backbone-min"
         ],
         "backbone.paginator": [
-            "https://cdnjs.cloudflare.com/ajax/libs/backbone.paginator/2.0.5/backbone.paginator.min",
             "lib/backbone.paginator.min"
         ],
         "moment": [
-            "https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min",
-            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min",
-            "lib/momemt.min"
+            "lib/moment.min"
         ],
 
         "moment.locale": [
-            "https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/"+locale,
-            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/"+locale,
-            "lib/moment.locale.en"
+            "lib/locale/"+locale
         ],
 
         "parser": [
-            "https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/3.12.16/parser.min"
+            "lib/parser.min"
         ],
 
         "toastr": [
-            "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min",
             "lib/toastr.min"
         ],
         "jquery.iframe-transport": [
-            "https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.28.0/js/jquery.iframe-transport.min",
             "lib/jquery.iframe-transport.min"
         ],
         "jquery-ui/ui/widget": [
             "lib/jquery.ui.widget"
         ],
         "jquery.fileupload": [
-            "https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.28.0/js/jquery.fileupload.min",
             "lib/jquery.fileupload.min"
         ],
         "etf.webui": [
@@ -211,8 +195,7 @@ if(['de', 'fr', 'nl', 'es', 'cs'].indexOf(locale)!==-1) {
         paths: {
             baseUrl: 'js',
             "moment.locale": [
-                "https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/"+locale,
-                "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/"+locale
+                "lib/locale/"+locale
             ],
         },
         map: {
